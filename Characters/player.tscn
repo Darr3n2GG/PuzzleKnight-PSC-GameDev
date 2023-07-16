@@ -1,12 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bi4wkcnwjkwwn"]
+[gd_scene load_steps=4 format=3 uid="uid://bi4wkcnwjkwwn"]
 
-[ext_resource type="Script" path="res://Characters/player.gd" id="1_lssk4"]
+[ext_resource type="Script" path="res://Characters/p_mapMove.gd" id="1_q73lb"]
+[ext_resource type="SpriteFrames" uid="uid://c4lar2gpgt6pd" path="res://sprites/characters/player.png" id="2_ifikw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glbt0"]
+size = Vector2(14.069, 8.70115)
 
 [node name="Player_Map" type="CharacterBody2D"]
-script = ExtResource("1_lssk4")
+script = ExtResource("1_q73lb")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_ifikw")
+animation = &"slash_up"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 7.5)
+scale = Vector2(0.92402, -2.18362)
+shape = SubResource("RectangleShape2D_glbt0")
 
 [node name="Camera" type="Camera2D" parent="."]
