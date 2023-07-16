@@ -2,3 +2,5 @@
 
 [node name="Map_Scene" type="Node2D"]
 metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
