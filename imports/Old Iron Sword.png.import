@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c256oftoyafxg"
-path="res://.godot/imported/Old Iron Sword.png-9a26b7efce99d1ec2779fdf54f537d77.ctex"
+path="res://.godot/imported/Old Iron Sword.png-359c0f57f4862869a4126cf1b424495e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Old Iron Sword.png"
-dest_files=["res://.godot/imported/Old Iron Sword.png-9a26b7efce99d1ec2779fdf54f537d77.ctex"]
+source_file="res://imports/Old Iron Sword.png"
+dest_files=["res://.godot/imported/Old Iron Sword.png-359c0f57f4862869a4126cf1b424495e.ctex"]
 
 [params]
 
