@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://bp567g14b47o3"]
+
+[ext_resource type="Script" path="res://Characters/p_mapMove.gd" id="1_x0krt"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8p5gy"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle_side",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"idle_up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move_side",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"move_up",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"slash_down",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"slash_side",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"slash_up",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glbt0"]
+size = Vector2(14.069, 8.70115)
+
+[node name="Player_Level" type="CharacterBody2D"]
+script = ExtResource("1_x0krt")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8p5gy")
+animation = &"dead"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 7.5)
+scale = Vector2(0.92402, -2.18362)
+shape = SubResource("RectangleShape2D_glbt0")
+
+[node name="Camera" type="Camera2D" parent="."]
