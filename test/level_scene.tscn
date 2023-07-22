@@ -162,6 +162,7 @@ sources/0 = SubResource("TileSetAtlasSource_736b5")
 metadata/_edit_lock_ = true
 
 [node name="Player_Level" parent="." instance=ExtResource("1_agupb")]
+position = Vector2(1, -21)
 
 [node name="TileMap_Level" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1tucg")

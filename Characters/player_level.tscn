@@ -33,7 +33,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glbt0"]
-size = Vector2(14.069, 8.70115)
+size = Vector2(15.1512, 13.2807)
 
 [node name="Player_Level" type="CharacterBody2D"]
 script = ExtResource("1_wekif")
@@ -42,10 +42,10 @@ script = ExtResource("1_wekif")
 sprite_frames = SubResource("SpriteFrames_1yb5y")
 animation = &"level_idle"
 autoplay = "level_idle"
-frame_progress = 0.286527
+frame_progress = 0.320208
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, 7.5)
+position = Vector2(-1, 0.5)
 scale = Vector2(0.92402, -2.18362)
 shape = SubResource("RectangleShape2D_glbt0")
 
