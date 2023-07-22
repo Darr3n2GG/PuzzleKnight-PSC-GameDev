@@ -1,9 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bi4wkcnwjkwwn"]
+[gd_scene load_steps=3 format=3 uid="uid://bi4wkcnwjkwwn"]
 
 [ext_resource type="Script" path="res://Characters/p_mapMove.gd" id="1_q73lb"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_8p5gy"]
-animations = []
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glbt0"]
 size = Vector2(14.069, 8.70115)
@@ -12,7 +9,6 @@ size = Vector2(14.069, 8.70115)
 script = ExtResource("1_q73lb")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_8p5gy")
 animation = &""
 
 [node name="Collision" type="CollisionShape2D" parent="."]
