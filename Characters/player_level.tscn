@@ -1,34 +1,34 @@
 [gd_scene load_steps=8 format=3 uid="uid://bp567g14b47o3"]
 
-[ext_resource type="Script" path="res://Characters/p_mapMove.gd" id="1_x0krt"]
-[ext_resource type="Texture2D" uid="uid://2u628jwpifve" path="res://imports/sprite sheet.png" id="2_qjrkl"]
+[ext_resource type="Script" path="res://Characters/p_levelMove.gd" id="1_wekif"]
+[ext_resource type="Texture2D" uid="uid://c5agt3vvvxqv3" path="res://imports/idle animation.png" id="2_0rhfc"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mgxec"]
-atlas = ExtResource("2_qjrkl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_v3my6"]
+atlas = ExtResource("2_0rhfc")
 region = Rect2(0, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jg3md"]
-atlas = ExtResource("2_qjrkl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhsu3"]
+atlas = ExtResource("2_0rhfc")
 region = Rect2(32, 0, 32, 32)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7ht6y"]
-atlas = ExtResource("2_qjrkl")
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3t28"]
+atlas = ExtResource("2_0rhfc")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1yb5y"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_mgxec")
+"texture": SubResource("AtlasTexture_v3my6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jg3md")
+"texture": SubResource("AtlasTexture_xhsu3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_7ht6y")
+"texture": SubResource("AtlasTexture_w3t28")
 }],
 "loop": true,
-"name": &"idle",
+"name": &"level_idle",
 "speed": 5.0
 }]
 
@@ -36,12 +36,13 @@ animations = [{
 size = Vector2(14.069, 8.70115)
 
 [node name="Player_Level" type="CharacterBody2D"]
-script = ExtResource("1_x0krt")
+script = ExtResource("1_wekif")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1yb5y")
-animation = &"idle"
-frame_progress = 0.266277
+animation = &"level_idle"
+autoplay = "level_idle"
+frame_progress = 0.286527
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 7.5)

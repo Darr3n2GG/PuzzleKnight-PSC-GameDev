@@ -7,13 +7,13 @@ extends CharacterBody2D
 
 func get_input():
 	var input = Vector2()
-	if Input.is_action_pressed('Right'):
+	if Input.is_action_pressed('right'):
 		input.x += 1
-	if Input.is_action_pressed('Left'):
+	if Input.is_action_pressed('left'):
 		input.x -= 1
-	if Input.is_action_pressed('Down'):
+	if Input.is_action_pressed('down'):
 		input.y += 1
-	if Input.is_action_pressed('Up'):
+	if Input.is_action_pressed('up'):
 		input.y -= 1
 	return input
 
@@ -28,15 +28,15 @@ func _physics_process(_delta):
 
 
 func update_animation():
-		if Input.is_action_pressed("Up"):
-			anim.play("walk_up")
-		elif Input.is_action_pressed("Down"):
-			anim.play("walk_down")
-		elif Input.is_action_pressed("Left") or Input.is_action_just_pressed("Right"):
-			anim.play("walk_side")
-			if Input.is_action_pressed("Left"):
-				anim.flip_h = false
-			else:
-				anim.flip_h = true
-		else:
+#		if Input.is_action_pressed("Up"):
+#			anim.play("walk_up")
+#		elif Input.is_action_pressed("Down"):
+#			anim.play("walk_down")
+#		elif Input.is_action_pressed("Left") or Input.is_action_just_pressed("Right"):
+#			anim.play("walk_side")
+#			if Input.is_action_pressed("Left"):
+#				anim.flip_h = false
+#			else:
+#				anim.flip_h = true
+#		else:
 			anim.play("idle_down")
