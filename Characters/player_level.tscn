@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://bp567g14b47o3"]
+
+[ext_resource type="Script" path="res://Characters/p_levelMove.gd" id="1_wekif"]
+[ext_resource type="Texture2D" uid="uid://ct2mah1wnvvun" path="res://imports/idle animation.png" id="2_0rhfc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n7dy3"]
+atlas = ExtResource("2_0rhfc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4ro2"]
+atlas = ExtResource("2_0rhfc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snc03"]
+atlas = ExtResource("2_0rhfc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1yb5y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n7dy3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4ro2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_snc03")
+}],
+"loop": true,
+"name": &"level_idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glbt0"]
+size = Vector2(16, 12)
+
+[node name="Player_Level" type="CharacterBody2D"]
+script = ExtResource("1_wekif")
+
+[node name="Animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1yb5y")
+animation = &"level_idle"
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1.9)
+scale = Vector2(0.92402, -2.18362)
+shape = SubResource("RectangleShape2D_glbt0")
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
