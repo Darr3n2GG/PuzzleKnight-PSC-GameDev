@@ -3,57 +3,7 @@
 [ext_resource type="Script" path="res://Characters/p_mapMove.gd" id="1_q73lb"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8p5gy"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"dead",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"idle_down",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"idle_side",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"idle_up",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"move_down",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"move_side",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"move_up",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"slash_down",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"slash_side",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"slash_up",
-"speed": 5.0
-}]
+animations = []
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glbt0"]
 size = Vector2(14.069, 8.70115)
@@ -63,7 +13,7 @@ script = ExtResource("1_q73lb")
 
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_8p5gy")
-animation = &"idle_up"
+animation = &""
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, 7.5)
