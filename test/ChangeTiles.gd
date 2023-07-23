@@ -6,9 +6,9 @@ const TILE_SIZE = 16 # Replace this with your actual tile size if different
 func _physics_process(_delta):
 	if Input.is_action_pressed("mb_left"):
 		# Get the current mouse position in local coordinates of the "ChangeTiles" node
-		var local_mouse_pos = get_global_mouse_position()
-		# Convert the local mouse position to the corresponding tile coordinates
-		var tile_coords = (local_mouse_pos / TILE_SIZE)
+		var global_mouse_pos = get_global_mouse_position()
+		# Convert the local mouse position to the corresponding tile coord
+		var tile_coords = (global_mouse_pos / TILE_SIZE) - Vector2(1,1)
 		print(tile_coords)
 #		if get_global_mouse_position().x + 4 < tile_coords.x:
 #			print("yes x")

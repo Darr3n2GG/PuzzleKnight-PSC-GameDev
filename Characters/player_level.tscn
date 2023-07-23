@@ -32,7 +32,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_glbt0"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n73go"]
 size = Vector2(16, 12)
 
 [node name="Player_Level" type="CharacterBody2D"]
@@ -45,7 +45,7 @@ animation = &"level_idle"
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.9)
 scale = Vector2(0.92402, -2.18362)
-shape = SubResource("RectangleShape2D_glbt0")
+shape = SubResource("RectangleShape2D_n73go")
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
