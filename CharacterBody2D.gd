@@ -16,7 +16,7 @@ func _physics_process(delta):
 		velocity.y += gravity * delta
 
 	# Handle Jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor():
+	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = jump_vel
 #		ani_spr.play ("jump")
 
@@ -24,20 +24,20 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 #	
 
-	if Input.is_action_pressed("Right"):
+	if Input.is_action_pressed("right"):
 		global_position.x += delta * sp
 		await(get_tree().create_timer(5))
 #		ani_spr.play ("walking")
 #		ani_spr.flip_h = false
 		
-	elif Input.is_action_pressed("Left"):
+	elif Input.is_action_pressed("left"):
 		global_position.x -= delta * sp
 #		ani_spr.play ("walking")
 #		ani_spr.flip_h = true
 		
 
 	
-	elif Input.is_action_just_pressed("Rsp"):
+	elif Input.is_action_just_pressed("reset"):
 		position = Vector2(5, 0)
 		
 	else:

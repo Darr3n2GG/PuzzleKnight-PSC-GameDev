@@ -21,4 +21,4 @@ func _physics_process(_delta):
 		# Perform any actions based on the detected tile ID
 		print("Tile ID at mouse position:", tile_id)
 #		if tile_id == 0:
-		set_cell(0,tile_coords,1 ,Vector2i(0,0))
+		set_cell(1,tile_coords,1 ,Vector2i(0,0))
