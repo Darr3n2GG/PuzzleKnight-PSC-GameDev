@@ -17,7 +17,7 @@ func _physics_process(delta):
 
 	# Reset
 	if Input.is_action_pressed("reset"):
-		position = Vector2(0, 0)
+		position = Vector2(0, -16)
 	
 #	# Handle Jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
