@@ -206,31 +206,31 @@ position = Vector2(-15, -8)
 texture = ExtResource("3_v30t6")
 script = ExtResource("5_q7t8e")
 
-[node name="background" type="Node2D" parent="."]
-show_behind_parent = true
-
-[node name="5-SkyColor4" type="Sprite2D" parent="background"]
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+layer = -1
 visible = false
-position = Vector2(-143, -103)
-texture = ExtResource("7_b3xir")
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="background"]
-
-[node name="Parallax Layer" type="ParallaxLayer" parent="background/ParallaxBackground"]
+[node name="Parallax Layer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_mirroring = Vector2(864, 0)
 script = ExtResource("7_bf0r6")
 
-[node name="5-SkyColor2" type="Sprite2D" parent="background/ParallaxBackground/Parallax Layer"]
+[node name="5-SkyColor2" type="Sprite2D" parent="ParallaxBackground/Parallax Layer"]
 top_level = true
 scale = Vector2(3, 3)
 texture = ExtResource("8_c22mm")
 offset = Vector2(0, -65)
 
-[node name="ParallaxLayer2" type="ParallaxLayer" parent="background/ParallaxBackground"]
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(576, 0)
 script = ExtResource("7_bf0r6")
 
-[node name="5-SkyColor3" type="Sprite2D" parent="background/ParallaxBackground/ParallaxLayer2"]
+[node name="5-SkyColor3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
 top_level = true
 scale = Vector2(2, 2)
 texture = ExtResource("9_d4knm")
 offset = Vector2(0, -60)
+
+[node name="5-SkyColor4" type="Sprite2D" parent="."]
+show_behind_parent = true
+scale = Vector2(3, 3)
+texture = ExtResource("7_b3xir")
