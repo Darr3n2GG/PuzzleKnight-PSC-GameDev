@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cj3x2gq1dx4ue"]
+[gd_scene load_steps=16 format=3 uid="uid://7dq5wih10ccg"]
 
 [ext_resource type="Script" path="res://CharacterBody2D.gd" id="1_fnlk2"]
 [ext_resource type="Texture2D" uid="uid://bitjc5oqjcnym" path="res://imports/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="1_uee3e"]
