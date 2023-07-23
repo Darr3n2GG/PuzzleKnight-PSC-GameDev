@@ -13,7 +13,7 @@ func _physics_process(_delta):
 		# Get the tile ID at the mouse position on the specified layer
 		var tile_id = get_cell_source_id(0,Vector2i(tile_coords))
 		# Perform any actions based on the detected tile ID
-		print("Tile ID at mouse position:", tile_id)
+#		print("Tile ID at mouse position:", tile_id)
 		if tile_id == -1:
 			set_cell(0,tile_coords,1 ,Vector2i(0,0))
 		elif tile_id == 1:
