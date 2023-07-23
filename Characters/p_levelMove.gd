@@ -7,65 +7,46 @@ extends CharacterBody2D
 @onready var anim = $Animation
 
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 func _physics_process(delta):
-	# Add the gravity.
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
-	# Reset
 	if Input.is_action_pressed("reset"):
-		position = Vector2(0, -5)
+		position = Vector2(0, -10)
 	
-#	# Handle Jump.
 	if Input.is_action_just_pressed("up") and is_on_floor():
 		velocity.y = jump_vel
 
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-#	var direction = Input.get_axis("Move_Left", "Move_Right")
-#	if direction:
-#		velocity.x = direction * speed
-#		anim.play("sprint")
-#	else:
-#		velocity.x = move_toward(velocity.x, 0, speed)
-#		anim.play("idle")
 	if Input.is_action_pressed("right"):
+		anim.flip_h = false
 		global_position.x += speed * delta
 	elif Input.is_action_pressed("left"):
+		anim.flip_h = true
 		global_position.x -= speed * delta
 	else:
 		pass
 		
-#	if Input.is_action_pressed("Crouch"):
-#		global_position.y += speed * delta
-#	if Input.is_action_pressed("Jump"):
-#		global_position.y -= speed * delta
-#		velocity.x = 0
-#		velocity.y = 0
 	move_and_slide()
 	update_animation()
 	
 	
 func update_animation():
-#	if not animation_locked:
-#		if velocity.y < 0:
-#			while not is_on_floor():
-#				anim.play("jump start")
-#				if anim.frame == 1:
-#					anim.pause()
-#				break
-#		elif velocity.y > 0:
-#			while not is_on_floor():
-#				anim.play("jump end")
-#				break
-#		elif Input.is_action_pressed("Move_Left")
-#			anim.play("level_leftsprint")
-#		elif Input.is_action_pressed("Move_Right"):
-#			anim.play("level_rightsprint")
-#		else:
-			anim.play("level_idle")
+		if velocity.y < 0:
+			while not is_on_floor():
+				anim.play("jump_start")
+				if anim.frame == 1:
+					anim.pause()
+				break
+		elif velocity.y > 0:
+			while not is_on_floor():
+				anim.play("jump_finish")
+				break
+		elif Input.is_action_pressed("right"):
+			anim.play("run")
+		elif Input.is_action_pressed("left"):
+			anim.play("run")
+		else:
+			anim.play("idle")
 	

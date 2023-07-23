@@ -17,7 +17,6 @@ func _physics_process(_delta):
 		global_position.y -= speed
 
 	pass
-	anim.play("idle")
 #
 #func _physics_process(_delta):
 #	var direction = get_input()
@@ -30,7 +29,7 @@ func _physics_process(_delta):
 
 
 
-#
+#help code animations!!!!!!
 #
 #func update_animation():
 ##		if Input.is_action_pressed("up"):
