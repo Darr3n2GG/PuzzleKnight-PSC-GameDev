@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://bp567g14b47o3"]
+[gd_scene load_steps=9 format=3 uid="uid://bp567g14b47o3"]
 
 [ext_resource type="Script" path="res://Characters/p_levelMove.gd" id="1_wekif"]
 [ext_resource type="Texture2D" uid="uid://ct2mah1wnvvun" path="res://imports/idle animation.png" id="2_0rhfc"]
+[ext_resource type="Script" path="res://Characters/Camera.gd" id="3_2fam4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n7dy3"]
 atlas = ExtResource("2_0rhfc")
@@ -49,3 +50,4 @@ shape = SubResource("RectangleShape2D_glbt0")
 
 [node name="Camera" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+script = ExtResource("3_2fam4")
