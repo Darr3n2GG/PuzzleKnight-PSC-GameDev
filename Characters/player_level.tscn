@@ -41,6 +41,8 @@ script = ExtResource("1_wekif")
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_1yb5y")
 animation = &"level_idle"
+frame = 2
+frame_progress = 0.86978
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 1.9)
@@ -48,4 +50,5 @@ scale = Vector2(0.92402, -2.18362)
 shape = SubResource("RectangleShape2D_n73go")
 
 [node name="Camera" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+offset = Vector2(0, -40)
+zoom = Vector2(4, 4)

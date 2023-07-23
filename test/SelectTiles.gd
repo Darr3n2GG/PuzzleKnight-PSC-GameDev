@@ -11,7 +11,7 @@ func _physics_process(_delta):
 	
 func update_position_snapped():
 	mouse_pos = Vector2(int(get_global_mouse_position().x / snap_x),int(get_global_mouse_position().y / snap_y))
-	global_position = (mouse_pos * snap_x ) + Vector2(8,8) 
+	global_position = (mouse_pos * snap_x) + Vector2(8,8)
 	if get_global_mouse_position().x + 4 < global_position.x:
 		global_position.x -= 16
 	if get_global_mouse_position().y + 4 < global_position.y:

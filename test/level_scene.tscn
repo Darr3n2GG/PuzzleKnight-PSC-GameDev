@@ -1,10 +1,14 @@
-[gd_scene load_steps=9 format=3 uid="uid://ch5awrvv87xsh"]
+[gd_scene load_steps=13 format=3 uid="uid://ch5awrvv87xsh"]
 
 [ext_resource type="PackedScene" uid="uid://bp567g14b47o3" path="res://Characters/player_level.tscn" id="1_agupb"]
 [ext_resource type="Texture2D" uid="uid://cawxybr4uyl3x" path="res://imports/Seasonal Tilesets/1 - Grassland/Terrain (16 x 16).png" id="2_4xa12"]
 [ext_resource type="Texture2D" uid="uid://bv6vgxqysn1l6" path="res://imports/cobblestone.png" id="3_v30t6"]
 [ext_resource type="Script" path="res://test/ChangeTiles.gd" id="4_orfhy"]
 [ext_resource type="Script" path="res://test/SelectTiles.gd" id="5_q7t8e"]
+[ext_resource type="Texture2D" uid="uid://bitjc5oqjcnym" path="res://imports/Seasonal Tilesets/1 - Grassland/Background parts/5 - Sky_color.png" id="7_b3xir"]
+[ext_resource type="Script" path="res://test/Parallax.gd" id="7_bf0r6"]
+[ext_resource type="Texture2D" uid="uid://bvhefq36a0hfj" path="res://imports/Seasonal Tilesets/1 - Grassland/Background parts/2 - Hills.png" id="8_c22mm"]
+[ext_resource type="Texture2D" uid="uid://c8gx7x3ihu48q" path="res://imports/Seasonal Tilesets/1 - Grassland/Background parts/1 - Foreground_scenery.png" id="9_d4knm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_736b5"]
 texture = ExtResource("2_4xa12")
@@ -201,3 +205,32 @@ modulate = Color(1, 1, 1, 0.498039)
 position = Vector2(-15, -8)
 texture = ExtResource("3_v30t6")
 script = ExtResource("5_q7t8e")
+
+[node name="background" type="Node2D" parent="."]
+show_behind_parent = true
+
+[node name="5-SkyColor4" type="Sprite2D" parent="background"]
+visible = false
+position = Vector2(-143, -103)
+texture = ExtResource("7_b3xir")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="background"]
+
+[node name="Parallax Layer" type="ParallaxLayer" parent="background/ParallaxBackground"]
+motion_mirroring = Vector2(864, 0)
+script = ExtResource("7_bf0r6")
+
+[node name="5-SkyColor2" type="Sprite2D" parent="background/ParallaxBackground/Parallax Layer"]
+top_level = true
+scale = Vector2(3, 3)
+texture = ExtResource("8_c22mm")
+offset = Vector2(0, -65)
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="background/ParallaxBackground"]
+script = ExtResource("7_bf0r6")
+
+[node name="5-SkyColor3" type="Sprite2D" parent="background/ParallaxBackground/ParallaxLayer2"]
+top_level = true
+scale = Vector2(2, 2)
+texture = ExtResource("9_d4knm")
+offset = Vector2(0, -60)
