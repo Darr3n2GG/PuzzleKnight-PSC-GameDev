@@ -743,12 +743,13 @@ texture = ExtResource("2_fchkg")
 [sub_resource type="TileSet" id="TileSet_jow5t"]
 sources/1 = SubResource("TileSetAtlasSource_iu11b")
 
-[node name="Tutorial_Scene" type="Node2D"]
+[node name="Map_Scene" type="Node2D"]
 metadata/_edit_lock_ = true
 
 [node name="Player_Map" parent="." instance=ExtResource("1_t42qf")]
 
 [node name="TileMap" type="TileMap" parent="."]
+show_behind_parent = true
 tile_set = SubResource("TileSet_jow5t")
 format = 2
 layer_0/name = "Ground"

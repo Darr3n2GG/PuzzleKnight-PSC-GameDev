@@ -11,11 +11,16 @@ func get_input():
 		input.x += 1
 	if Input.is_action_pressed('left'):
 		input.x -= 1
-#	if Input.is_action_pressed('down'):
-#		input.y += 1
+	if Input.is_action_pressed('down'):
+		input.y += 1
 	if Input.is_action_pressed('up'):
 		input.y -= 1
+	else:
+		velocity.x = 0
+#		velocity.y = 0
 	return input
+	
+	anim.play("idle")
 #
 func _physics_process(_delta):
 	var direction = get_input()
@@ -25,6 +30,9 @@ func _physics_process(_delta):
 		velocity = velocity.lerp(Vector2.ZERO, friction)
 	move_and_slide()
 #	update_animation()
+
+
+
 #
 #
 #func update_animation():
