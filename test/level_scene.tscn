@@ -182,8 +182,6 @@ metadata/_edit_lock_ = true
 top_level = true
 position = Vector2(1, -21)
 
-[node name="RunTimer" type="Timer" parent="Player_Level"]
-
 [node name="TileMap_Level" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_1tucg")
 cell_quadrant_size = 15
