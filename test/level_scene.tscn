@@ -166,12 +166,11 @@ texture = ExtResource("3_v30t6")
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
-0:0/0/custom_data_0 = 1
 
 [sub_resource type="TileSet" id="TileSet_1tucg"]
 physics_layer_0/collision_layer = 1
-custom_data_layer_0/name = "terrain"
-custom_data_layer_0/type = 2
+custom_data_layer_0/name = "custom_value"
+custom_data_layer_0/type = 4
 sources/0 = SubResource("TileSetAtlasSource_736b5")
 sources/1 = SubResource("TileSetAtlasSource_gdia8")
 
