@@ -157,7 +157,7 @@ script = ExtResource("1_wekif")
 position = Vector2(5, -2)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_1yb5y")
-animation = &"jump_start"
+animation = &"idle"
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(3, 2)
