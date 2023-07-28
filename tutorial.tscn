@@ -553,7 +553,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgtok"]
 size = Vector2(72, 103)
 
-[node name="Tutorial" type="Node2D"]
+[node name="Old" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_rf162")

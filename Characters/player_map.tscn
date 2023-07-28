@@ -359,7 +359,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_glbt0"]
-size = Vector2(22.1857, 11.6779)
+size = Vector2(14.069, 1.83182)
 
 [node name="Player_Map" type="CharacterBody2D"]
 script = ExtResource("1_q73lb")
@@ -367,10 +367,10 @@ script = ExtResource("1_q73lb")
 [node name="Animation" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_w6g0w")
 animation = &"idle"
-frame_progress = 0.786327
+frame_progress = 0.0544602
 
 [node name="Collision" type="CollisionShape2D" parent="."]
-position = Vector2(-0.250009, 2.75)
+position = Vector2(0.5, 6)
 scale = Vector2(0.92402, -2.18362)
 shape = SubResource("RectangleShape2D_glbt0")
 

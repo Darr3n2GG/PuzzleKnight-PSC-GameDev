@@ -9,12 +9,23 @@ func _physics_process(_delta):
 #	var input = Vector2()
 	if Input.is_action_pressed('right'):
 		global_position.x += speed
+		anim.play("move_right")
 	if Input.is_action_pressed('left'):
 		global_position.x -= speed
+		anim.play("move_left")
+		
 	if Input.is_action_pressed('down'):
 		global_position.y += speed
+		if not Input.is_action_pressed("hor"):
+			anim.play("move_down")
+		
 	if Input.is_action_pressed('up'):
 		global_position.y -= speed
+		if not Input.is_action_pressed("hor"):
+			anim.play("move_up")
+		
+	if not Input.is_action_pressed("Any"):
+		anim.play("idle")
 
 	pass
 #
