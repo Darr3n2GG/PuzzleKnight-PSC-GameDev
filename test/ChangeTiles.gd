@@ -10,7 +10,7 @@ func _physics_process(_delta):
 	if Input.is_action_pressed("mb_left"):
 		var mouse_pos = get_global_mouse_position()
 		var tile_coords = self.local_to_map(mouse_pos)
-		print(tile_coords)
+#		print(tile_coords)
 		var tile_id = get_cell_source_id(0,Vector2i(tile_coords))
 		var tile_left_id = get_cell_source_id(0,Vector2i(tile_coords.x + 1,tile_coords.y))
 		var tile_right_id = get_cell_source_id(0,Vector2i(tile_coords.x - 1,tile_coords.y))
