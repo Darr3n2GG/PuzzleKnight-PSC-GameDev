@@ -26,7 +26,6 @@ func _physics_process(delta):
 
 	if Input.is_action_pressed("right"):
 		global_position.x += delta * sp
-		await(get_tree().create_timer(5))
 #		ani_spr.play ("walking")
 #		ani_spr.flip_h = false
 		
