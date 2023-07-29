@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnyhpu7x5m2bm"]
+
+[ext_resource type="Script" path="res://platform_levels/Trap.gd" id="1_yyheh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vfuhe"]
+size = Vector2(1742, 3630)
+
+[node name="PlayerDetect" type="Area2D"]
+visible = false
+position = Vector2(4321, -266)
+script = ExtResource("1_yyheh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(593, -1553)
+shape = SubResource("RectangleShape2D_vfuhe")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

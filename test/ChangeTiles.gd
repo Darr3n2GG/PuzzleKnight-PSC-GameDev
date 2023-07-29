@@ -7,7 +7,7 @@ extends TileMap
 
 
 func _physics_process(_delta):
-	if Input.is_action_pressed("mb_left"):
+	if Input.is_action_just_pressed("mb_left"):
 		var mouse_pos = get_global_mouse_position()
 		var tile_coords = self.local_to_map(mouse_pos)
 #		print(tile_coords)
