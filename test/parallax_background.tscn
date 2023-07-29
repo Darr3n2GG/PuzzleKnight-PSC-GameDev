@@ -14,7 +14,7 @@ position = Vector2(-320, -106)
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
 position = Vector2(-608, -210)
-motion_mirroring = Vector2(576, 104)
+motion_mirroring = Vector2(576, 208)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer6"]
 show_behind_parent = true
@@ -24,6 +24,7 @@ centered = false
 region_rect = Rect2(-6, 5, 965, 463)
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 position = Vector2(-608, -210)
 motion_scale = Vector2(0.5, 1)
 motion_mirroring = Vector2(576, 0)

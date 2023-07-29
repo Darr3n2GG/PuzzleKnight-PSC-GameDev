@@ -184,11 +184,9 @@ top_level = true
 position = Vector2(-934, -554)
 
 [node name="StaticBG" type="Sprite2D" parent="."]
-visible = false
-show_behind_parent = true
-scale = Vector2(3, 3)
+scale = Vector2(2, 1)
 texture = ExtResource("8_u8k5k")
-offset = Vector2(0, -55)
+offset = Vector2(0, -104)
 script = ExtResource("9_lj7bc")
 
 [node name="TileMap_Level" type="TileMap" parent="."]
@@ -222,7 +220,7 @@ shape = SubResource("RectangleShape2D_vfuhe")
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("7_odh5m")]
 
-[node name="Area2D" parent="." instance=ExtResource("9_kj5eu")]
+[node name="end" parent="." instance=ExtResource("9_kj5eu")]
 position = Vector2(6771, -3176)
 
 [node name="Ambience" type="AudioStreamPlayer2D" parent="."]
