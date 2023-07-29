@@ -9,24 +9,15 @@ func _physics_process(_delta):
 #	var input = Vector2()
 	if Input.is_action_pressed('right'):
 		global_position.x += speed
-		anim.play("move_right")
-	if Input.is_action_pressed('left'):
-		global_position.x -= speed
-		anim.play("move_left")
-		
-	if Input.is_action_pressed('down'):
-		global_position.y += speed
-		if not Input.is_action_pressed("hor"):
-			anim.play("move_down")
-		
-	if Input.is_action_pressed('up'):
-		global_position.y -= speed
-		if not Input.is_action_pressed("hor"):
-			anim.play("move_up")
-		
-	if not Input.is_action_pressed("Any"):
-		anim.play("idle")
 
+	if  Input.is_action_pressed('left'):
+		global_position.x -= speed
+		
+	if  Input.is_action_pressed('down'):
+		global_position.y += speed
+		
+	if  Input.is_action_pressed('up'):
+		global_position.y -= speed
 	pass
 #
 #func _physics_process(_delta):
@@ -36,22 +27,20 @@ func _physics_process(_delta):
 #	else:
 #		velocity = velocity.lerp(Vector2.ZERO, friction)
 	move_and_slide()
-#	update_animation()
+	update_animation()
 
 
 
 #help code animations!!!!!!
 #
-#func update_animation():
-##		if Input.is_action_pressed("up"):
-##			anim.play("walk_up")
-###		elif Input.is_action_pressed("Down"):
-###			anim.play("walk_down")
-##		elif Input.is_action_pressed("left") or Input.is_action_just_pressed("right"):
-##			anim.play("walk_side")
-##			if Input.is_action_pressed("left"):
-##				anim.flip_h = false
-##			else:
-##				anim.flip_h = true
-##		else:
-#			anim.play("idle")
+func update_animation():
+		if Input.is_action_pressed("right"):
+			anim.play("move_right")
+		elif Input.is_action_pressed("left"):
+			anim.play("move_left")
+		elif Input.is_action_pressed("up"):
+			anim.play("move_up")
+		elif Input.is_action_pressed("down"):
+			anim.play("move_down")
+		else:
+			anim.play("idle")

@@ -1,7 +1,7 @@
 extends Sprite2D
 
 
-func _input(event):
+func _input(_event):
 
 	if Input.is_action_pressed("mb_left"):
 		var mouse = get_local_mouse_position()
