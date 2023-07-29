@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 @export var speed : float = 200.0
+
 @export var jump_vel : float = -300.0
 @onready var anim = $Animation
 
@@ -48,5 +49,4 @@ func update_animation():
 			anim.play("run")
 		else:
 			anim.play("idle")
-			
 	
