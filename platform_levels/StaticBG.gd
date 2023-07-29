@@ -6,3 +6,4 @@ var speedoffset = 1
 
 func _process(_delta):
 	position = player.position * layer * speedoffset
+	

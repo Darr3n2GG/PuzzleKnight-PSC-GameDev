@@ -144,7 +144,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"run",
-"speed": 5.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_84n3d"]
@@ -157,7 +157,9 @@ script = ExtResource("1_wekif")
 position = Vector2(5, -2)
 scale = Vector2(0.4, 0.4)
 sprite_frames = SubResource("SpriteFrames_1yb5y")
-animation = &"idle"
+animation = &"run"
+frame = 2
+frame_progress = 0.235986
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(3, 2)
