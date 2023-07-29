@@ -4,7 +4,7 @@ extends TileMap
 @onready var popup = $Window
 
 
-func _input(event):
+func _input(_event):
 
 	if Input.is_action_pressed("mb_left"):
 		var mouse_pos = get_global_mouse_position()
