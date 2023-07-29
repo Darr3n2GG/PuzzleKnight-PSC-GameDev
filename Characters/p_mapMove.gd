@@ -34,13 +34,19 @@ func _physics_process(_delta):
 #help code animations!!!!!!
 #
 func update_animation():
-		if Input.is_action_pressed("right"):
+	if Input.is_action_pressed("left") and Input.is_action_pressed("right"):
+		anim.play("idle")
+	elif Input.is_action_pressed("up") and Input.is_action_pressed("down"):
+		anim.play("idle")
+		
+	elif Input.is_action_pressed("right"):
 			anim.play("move_right")
-		elif Input.is_action_pressed("left"):
-			anim.play("move_left")
-		elif Input.is_action_pressed("up"):
-			anim.play("move_up")
-		elif Input.is_action_pressed("down"):
-			anim.play("move_down")
-		else:
-			anim.play("idle")
+	elif Input.is_action_pressed("left"):
+		anim.play("move_left")
+		
+	elif Input.is_action_pressed("up"):
+		anim.play("move_up")
+	elif Input.is_action_pressed("down"):
+		anim.play("move_down")
+	else:
+		anim.play("idle")
