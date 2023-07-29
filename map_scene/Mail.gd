@@ -3,7 +3,7 @@ extends TileMap
 ##var has_mail := true
 #@onready var sceneTree = get_tree()
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_pressed("mb_left"):
 		var mouse_pos = get_global_mouse_position()
 		var tile_coords = self.local_to_map(mouse_pos)
