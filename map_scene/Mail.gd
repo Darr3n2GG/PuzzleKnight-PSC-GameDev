@@ -15,7 +15,9 @@ func _input(_event):
 			set_cell(2, Vector2i(1,0), 1, Vector2i(7, 16))
 			popup.show()
 			print("Click on the stamp")
-
+	
+	if Input.is_action_pressed("Q"):
+		popup.hide()
 #
 #func load_next_scene():
 #	# Load the next scene (replace "res://scenes/next_scene.tscn" with the path to your next scene)
