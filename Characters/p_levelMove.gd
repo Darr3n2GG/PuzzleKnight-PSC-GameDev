@@ -17,7 +17,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("reset"):
 		position = Vector2(0, -10)
 	
-	if Input.is_action_just_pressed("up") and is_on_floor():
+	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_vel
 
 	if Input.is_action_pressed("right"):
