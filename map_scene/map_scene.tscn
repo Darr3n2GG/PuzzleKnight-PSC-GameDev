@@ -2293,6 +2293,7 @@ layer_2/tile_data = PackedInt32Array(1, 524289, 16)
 script = ExtResource("5_1tnmv")
 
 [node name="Mail" type="Popup" parent="."]
+initial_position = 1
 size = Vector2i(637, 389)
 visible = true
 theme = SubResource("Theme_w8omf")
