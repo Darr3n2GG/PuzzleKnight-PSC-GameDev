@@ -29,6 +29,9 @@ func _physics_process(delta):
 	else:
 		pass
 		
+	if position.y > 5000:
+		position = Vector2(-554, -10)
+		
 	move_and_slide()
 	update_animation()
 	

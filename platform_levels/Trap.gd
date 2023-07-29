@@ -1,6 +1,6 @@
-extends Area2D
-
-
+#extends Area2D
+#
+#
 #@onready var player = $Player_Level
 #@onready var tileset = $TileMap_Level
 #
@@ -8,7 +8,7 @@ extends Area2D
 #
 #func _on_body_entered(_body):
 ##	print(tile_coords)
-#	var player_left = player.position + 1
+#	var player_left = player.position.x + 1
 ##	var tile_id = tileset.get_cell_source_id(0,Vector2i(tile_coords))
 ##	var tile_left_id = tileset.get_cell_source_id(0,Vector2i(tile_coords.x + 1,tile_coords.y))
 ##	var tile_right_id = tileset.get_cell_source_id(0,Vector2i(tile_coords.x - 1,tile_coords.y))
