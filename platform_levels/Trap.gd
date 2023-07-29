@@ -1,4 +1,4 @@
-#extends Area2D
+extends Area2D
 #
 #
 #@onready var player = $Player_Level
