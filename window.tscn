@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://jx47qnepltub" path="res://Mail.png" id="1_v0dq5"]
 [ext_resource type="Texture2D" uid="uid://8my0je017gsv" path="res://Stamp.png" id="2_qktof"]
-[ext_resource type="Script" path="res://Stamp.gd" id="3_uycg5"]
+[ext_resource type="Script" path="res://Stampclicked.gd" id="3_p0d3l"]
 
 [node name="Window" type="Window"]
 transparent_bg = true
@@ -17,8 +17,8 @@ transparent = true
 [node name="Mail" type="Sprite2D" parent="Camera2D"]
 texture = ExtResource("1_v0dq5")
 
-[node name="STamp" type="Sprite2D" parent="Camera2D"]
+[node name="Stamp" type="Sprite2D" parent="Camera2D"]
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_qktof")
 offset = Vector2(500, 0)
-script = ExtResource("3_uycg5")
+script = ExtResource("3_p0d3l")

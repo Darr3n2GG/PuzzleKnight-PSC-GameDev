@@ -20,7 +20,7 @@ position = Vector2(-934, -554)
 
 [node name="TileMap_Level" parent="." instance=ExtResource("3_l1cun")]
 
-[node name="PlayerDetect" parent="." instance=ExtResource("4_frtgt")]
+[node name="Trap" parent="." instance=ExtResource("4_frtgt")]
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("7_odh5m")]
 
