@@ -4,7 +4,7 @@ extends TileMap
 #var placed = 0
 #var dir: String = "0"
 #var tile_custom_value = "custom_value"
-
+var blocks = 0
 
 func _physics_process(_delta):
 	if Input.is_action_pressed("mb_left"):
@@ -17,8 +17,12 @@ func _physics_process(_delta):
 		var tile_up_id = get_cell_source_id(0,Vector2i(tile_coords.x,tile_coords.y + 1))
 		var tile_down_id = get_cell_source_id(0,Vector2i(tile_coords.x,tile_coords.y - 1))
 		if tile_left_id != -1 or tile_right_id != -1 or tile_up_id != -1  or tile_down_id != -1:
-			if tile_id != 0:
+			if tile_id == -1:
 				set_cell(0,tile_coords,1 ,Vector2i(0,0))
+				blocks += 1
+				print(blocks)
+# 165 to 465 blocks needed
+				
 #		print("Left Tile ID:", tile_left_id ,
 #		"\nRight Tile ID:", tile_right_id, "\nUp Tile ID:", tile_up_id, "\nDown Tile ID:", tile_down_id)
 	
